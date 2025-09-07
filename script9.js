@@ -68,7 +68,7 @@ var lc = L.control.locate({
 var kmlLayer = L.layerGroup();
 
 // Carga y estiliza el archivo KML
-fetch('ubisimple/cobertura_capital.kml')
+fetch('https://gtja77.github.io/UbiSimple/cobertura_capital.kml')
     .then(res => res.text())
     .then(kmltext => {
         // Analiza el KML y lo convierte a una capa de Leaflet
@@ -103,7 +103,7 @@ var allNAPs = []; // Almacena todos los marcadores para búsquedas
 
 // Iconos personalizados
 var icon1_8 = L.icon({
-    iconUrl: 'ubisimple/circulo8.png',
+    iconUrl: 'https://gtja77.github.io/UbiSimple/circulo8.png',
     iconSize: [20, 20],
     iconAnchor: [12, 12],
     popupAnchor: [1, -34],
@@ -112,7 +112,7 @@ var icon1_8 = L.icon({
 });
 
 var icon1_16 = L.icon({
-    iconUrl: 'ubisimple/circulo16.png',
+    iconUrl: 'https://gtja77.github.io/UbiSimple/circulo16.png',
     iconSize: [20, 20],
     iconAnchor: [12, 12],
     popupAnchor: [1, -34],
@@ -121,7 +121,7 @@ var icon1_16 = L.icon({
 });
 
 var iconHighlight = L.icon({
-    iconUrl: 'ubisimple/resultado.png',
+    iconUrl: 'https://gtja77.github.io/UbiSimple/resultado.png',
     iconSize: [40, 40],
     iconAnchor: [30, 30],
     popupAnchor: [1, -34],
@@ -146,7 +146,7 @@ function getDistance(lat1, lon1, lat2, lon2) {
 }
 
 // Cargar el archivo GeoJSON
-fetch('ubisimple/naps_ISP_22082025.geojson')
+fetch('https://gtja77.github.io/UbiSimple/naps_ISP_22082025.geojson')
     .then(response => {
         if (!response.ok) {
             throw new Error('No se pudo cargar el archivo GeoJSON: ' + response.statusText);
@@ -257,3 +257,4 @@ L.Control.geocoder({
 })
 
 .addTo(map);
+
